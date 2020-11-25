@@ -1,0 +1,55 @@
+{% extends 'frontend/base.html' %}
+{% block content %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Breakout!!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Germania+One">
+    <link rel="stylesheet" href="{% static './js/breakout/game.css' %}">
+    <link href="{% static './js/breakout/scoreboard.css' %}" type='text/css' media='screen' rel='stylesheet'>
+    <script defer> var rootContext = 'static/js/breakout/' </script>
+    <script src="{% static './js/breakout/components.js' %}"defer></script>
+    <script src="{% static './js/breakout/game.js' %}"defer></script>
+</head>
+<body>
+    <div id='viewport'>
+        <div id="nicknamescreen">
+            <input id='nickname' value="{{user.username}}">
+        </div>
+        <div class="sound">
+            <img src="{% static './js/breakout/img/SOUND_ON.png' %}" alt="" id="sound">
+        </div>
+        <canvas id="breakout"></canvas>
+        <div id="gameover">
+            <img src="{% static './js/breakout/img/gameover.png' %}" alt="" id="youlose">
+            <img src="{% static './js/breakout/img/playagain.png' %}" alt="" id="restart">
+        </div>
+        <div id="gamestart">
+            <img src="{% static './js/breakout/img/start.png' %}" alt="" id="start">
+        </div>
+        <div id="score">
+            <img src="{% static './js/breakout/img/showscore.png' %}" alt="" id="showscore">
+        </div>
+        <div id='inputscore'>
+            Score : 0
+        </div>
+        <div id='finalscore'>
+            <div id='yourscore'></div>
+        </div>
+        <div id='scoreboard'>
+            <div id='title'>HIGH SCORES</div>
+                <ol>
+                    <li id='top1'></li>
+                    <li id='top2'></li>
+                    <li id='top3'></li>
+                </ol>
+            <img src="{% static './js/breakout/img/back.png' %}" alt="" id="back">
+        </div>
+    </div>    
+    <script src="{% static './js/breakout/scoreboard.js' %}"></script>
+</body>
+</html>
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends 'frontend/base.html' %}
+{% block content %}
+<title>Fngame</title>
+
+
+    <div class="row">
+        <div class="column">
+            <a class="card-link" href="{% url 'breakout' %}">
+                <div class="card">
+                    <img class="card-img-top" src="./static/img/breakout.jpg">
+                    <div class="card-text"><h2>Breakout <span class="badge badge-primary">New !</span></h2></div>
+                </div>
+            </a>
+        </div>
+        <div class="column">
+            <a class="card-link" href="{% url 'ghost' %}">
+                <div class="card">
+                    <img class="card-img-top" src="./static/img/qghost.jpg">
+                    <div class="card-text"><h2>Kill The Ghost <span class="badge badge-primary">New !</span></h2></div>
+                </div>
+            </a>
+        </div>
+        <div class="column">
+            <div class="card">
+                <img class="card-img-top" src="./static/img/soon.jpg">
+                <div class="card-text"><h2>Coming Soon</h2></div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

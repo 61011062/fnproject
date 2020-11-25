@@ -1,0 +1,25 @@
+{% extends 'frontend/base.html' %}
+{% block content %}
+<title>FNGame » Games</title>
+<div class="main">
+    <h1>games</h1>
+    <div class="row">
+        <div class="column">
+            <a class="card-link" href="{% url 'breakout' %}">
+                <div class="card">
+                    <img class="card-img-top" src="./static/img/breakout.jpg">
+                    <div class="card-text"><h2>Breakout</h2></div>
+                </div>
+            </a>
+        </div>
+        <div class="column">
+            <a class="card-link" href="{% url 'ghost' %}">
+                <div class="card">
+                    <img class="card-img-top" src="./static/img/qghost.jpg">
+                    <div class="card-text"><h2>Kill The Ghost</h2></div>
+                </div>
+            </a>
+        </div>      
+    </div>
+</div>
+{% endblock %}
